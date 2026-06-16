@@ -1,0 +1,521 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">JNU-SHARK GitHub organization dashboard</title>
+  <desc id="desc">16:9 dashboard with full visible organization statistics, commit heatmap, repository ranking, and contributor ranking.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.52" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#131625"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#52f0b4"/>
+      <stop offset="0.45" stop-color="#5db7ff"/>
+      <stop offset="1" stop-color="#f0d85a"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #e8edf7; }
+    .kicker { font-size: 24px; font-weight: 700; fill: #52f0b4; letter-spacing: 0; }
+    .title { font-size: 78px; font-weight: 900; letter-spacing: 0; }
+    .cn-title { font-size: 38px; font-weight: 820; fill: #eef4ff; }
+    .subtitle { font-size: 23px; fill: #aab6cc; }
+    .label { font-size: 18px; fill: #8fa0bc; font-weight: 650; }
+    .stat { font-size: 44px; font-weight: 850; }
+    .section-title { font-size: 22px; font-weight: 820; fill: #eef4ff; }
+    .row-name { font-size: 18px; fill: #c8d3e7; font-weight: 650; }
+    .row-value { font-size: 20px; fill: #eef4ff; font-weight: 800; }
+    .tiny { font-size: 15px; fill: #8fa0bc; }
+    .pill { font-size: 18px; fill: #d7e2f4; font-weight: 720; }
+    .mono { font-size: 18px; fill: #aab6cc; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  </style>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 124 C250 80 385 160 620 114 C860 67 982 28 1220 74 C1392 108 1495 152 1600 121 L1600 0 L0 0 Z" fill="#12385c" opacity="0.38"/>
+  <path d="M0 834 C216 805 318 875 553 830 C835 776 935 837 1160 794 C1350 758 1464 789 1600 744 L1600 900 L0 900 Z" fill="#173622" opacity="0.36"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="48" y="42" width="1504" height="816" rx="34" fill="#0b1324" opacity="0.88" stroke="#263654"/>
+  </g>
+
+  <text x="78" y="98" class="kicker">ROBOMASTER ENGINEERING · FULL ORG STATS</text>
+  <text x="78" y="178" class="title">JNU-SHARK</text>
+  <text x="80" y="226" class="cn-title">霞客湾 SHARK 机器人俱乐部</text>
+  <text x="80" y="264" class="subtitle">江南大学霞客湾机器人俱乐部 · 成员 / 私有仓库 / 全量可见提交统计</text>
+  <rect x="78" y="286" width="524" height="6" rx="3" fill="url(#hero)"/>
+  <text x="1170" y="104" class="mono">github.com/JNU-SHARK</text>
+  <text x="1170" y="136" class="tiny">Updated 2026-06-17 Asia/Shanghai</text>
+  <text x="1170" y="168" class="tiny">Latest active project: electric-control-tutorial</text>
+
+  
+  <g>
+    <rect x="78" y="324" width="245" height="112" rx="22" fill="#10182a" stroke="#23304a"/>
+    <rect x="78" y="324" width="245" height="5" rx="2.5" fill="#52f0b4"/>
+    <text x="102" y="369" class="label">ORGANIZATION MEMBERS</text>
+    <text x="102" y="412" class="stat">24</text>
+  </g>
+  
+  <g>
+    <rect x="360" y="324" width="245" height="112" rx="22" fill="#10182a" stroke="#23304a"/>
+    <rect x="360" y="324" width="245" height="5" rx="2.5" fill="#5db7ff"/>
+    <text x="384" y="369" class="label">TOTAL PROJECTS</text>
+    <text x="384" y="412" class="stat">43</text>
+  </g>
+  
+  <g>
+    <rect x="642" y="324" width="245" height="112" rx="22" fill="#10182a" stroke="#23304a"/>
+    <rect x="642" y="324" width="245" height="5" rx="2.5" fill="#ff7a90"/>
+    <text x="666" y="369" class="label">PRIVATE REPOS</text>
+    <text x="666" y="412" class="stat">33</text>
+  </g>
+  
+  <g>
+    <rect x="924" y="324" width="245" height="112" rx="22" fill="#10182a" stroke="#23304a"/>
+    <rect x="924" y="324" width="245" height="5" rx="2.5" fill="#f0d85a"/>
+    <text x="948" y="369" class="label">PUBLIC REPOS</text>
+    <text x="948" y="412" class="stat">10</text>
+  </g>
+  
+  <g>
+    <rect x="1206" y="324" width="245" height="112" rx="22" fill="#10182a" stroke="#23304a"/>
+    <rect x="1206" y="324" width="245" height="5" rx="2.5" fill="#b59cff"/>
+    <text x="1230" y="369" class="label">COMMITS · 365D</text>
+    <text x="1230" y="412" class="stat">698</text>
+  </g>
+
+  <text x="78" y="506" class="section-title">COMMIT HISTORY · LAST 365 DAYS</text>
+  <rect x="78" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-06-15: 0 commits</title></rect>
+<rect x="78" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-06-16: 0 commits</title></rect>
+<rect x="78" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-06-17: 4 commits</title></rect>
+<rect x="78" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-06-18: 1 commits</title></rect>
+<rect x="78" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-06-19: 0 commits</title></rect>
+<rect x="78" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-06-20: 0 commits</title></rect>
+<rect x="78" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-06-21: 3 commits</title></rect>
+<rect x="95" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-06-22: 3 commits</title></rect>
+<rect x="95" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-06-23: 1 commits</title></rect>
+<rect x="95" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-06-24: 1 commits</title></rect>
+<rect x="95" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-06-25: 0 commits</title></rect>
+<rect x="95" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-06-26: 2 commits</title></rect>
+<rect x="95" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-06-27: 0 commits</title></rect>
+<rect x="95" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-06-28: 2 commits</title></rect>
+<rect x="112" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-06-29: 0 commits</title></rect>
+<rect x="112" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-06-30: 0 commits</title></rect>
+<rect x="112" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-01: 0 commits</title></rect>
+<rect x="112" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-02: 0 commits</title></rect>
+<rect x="112" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-03: 0 commits</title></rect>
+<rect x="112" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-04: 0 commits</title></rect>
+<rect x="112" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-05: 0 commits</title></rect>
+<rect x="129" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-06: 0 commits</title></rect>
+<rect x="129" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-07: 0 commits</title></rect>
+<rect x="129" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-08: 2 commits</title></rect>
+<rect x="129" y="586" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2025-07-09: 10 commits</title></rect>
+<rect x="129" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-10: 4 commits</title></rect>
+<rect x="129" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-11: 6 commits</title></rect>
+<rect x="129" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-12: 3 commits</title></rect>
+<rect x="146" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-13: 4 commits</title></rect>
+<rect x="146" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-14: 4 commits</title></rect>
+<rect x="146" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-15: 2 commits</title></rect>
+<rect x="146" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-16: 7 commits</title></rect>
+<rect x="146" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-17: 0 commits</title></rect>
+<rect x="146" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-18: 1 commits</title></rect>
+<rect x="146" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-19: 2 commits</title></rect>
+<rect x="163" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-20: 9 commits</title></rect>
+<rect x="163" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-21: 1 commits</title></rect>
+<rect x="163" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-22: 2 commits</title></rect>
+<rect x="163" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-23: 0 commits</title></rect>
+<rect x="163" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-24: 0 commits</title></rect>
+<rect x="163" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-25: 0 commits</title></rect>
+<rect x="163" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-26: 6 commits</title></rect>
+<rect x="180" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-27: 5 commits</title></rect>
+<rect x="180" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-28: 0 commits</title></rect>
+<rect x="180" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-29: 0 commits</title></rect>
+<rect x="180" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-30: 1 commits</title></rect>
+<rect x="180" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-31: 0 commits</title></rect>
+<rect x="180" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-08-01: 1 commits</title></rect>
+<rect x="180" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-02: 0 commits</title></rect>
+<rect x="197" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-03: 0 commits</title></rect>
+<rect x="197" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-04: 0 commits</title></rect>
+<rect x="197" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-05: 0 commits</title></rect>
+<rect x="197" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-06: 0 commits</title></rect>
+<rect x="197" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-07: 0 commits</title></rect>
+<rect x="197" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-08: 0 commits</title></rect>
+<rect x="197" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-09: 0 commits</title></rect>
+<rect x="214" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-08-10: 1 commits</title></rect>
+<rect x="214" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-11: 0 commits</title></rect>
+<rect x="214" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-12: 0 commits</title></rect>
+<rect x="214" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-13: 0 commits</title></rect>
+<rect x="214" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-14: 0 commits</title></rect>
+<rect x="214" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-15: 0 commits</title></rect>
+<rect x="214" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-16: 0 commits</title></rect>
+<rect x="231" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-17: 0 commits</title></rect>
+<rect x="231" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-18: 0 commits</title></rect>
+<rect x="231" y="569" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2025-08-19: 11 commits</title></rect>
+<rect x="231" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-08-20: 1 commits</title></rect>
+<rect x="231" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-21: 0 commits</title></rect>
+<rect x="231" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-22: 0 commits</title></rect>
+<rect x="231" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-23: 0 commits</title></rect>
+<rect x="248" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-24: 0 commits</title></rect>
+<rect x="248" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-25: 0 commits</title></rect>
+<rect x="248" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-26: 0 commits</title></rect>
+<rect x="248" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-27: 0 commits</title></rect>
+<rect x="248" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-28: 0 commits</title></rect>
+<rect x="248" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-29: 0 commits</title></rect>
+<rect x="248" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-30: 0 commits</title></rect>
+<rect x="265" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-08-31: 0 commits</title></rect>
+<rect x="265" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-01: 0 commits</title></rect>
+<rect x="265" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-02: 0 commits</title></rect>
+<rect x="265" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-03: 0 commits</title></rect>
+<rect x="265" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-09-04: 2 commits</title></rect>
+<rect x="265" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-05: 0 commits</title></rect>
+<rect x="265" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-06: 0 commits</title></rect>
+<rect x="282" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-07: 0 commits</title></rect>
+<rect x="282" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-08: 0 commits</title></rect>
+<rect x="282" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-09: 0 commits</title></rect>
+<rect x="282" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-10: 0 commits</title></rect>
+<rect x="282" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-11: 0 commits</title></rect>
+<rect x="282" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-12: 0 commits</title></rect>
+<rect x="282" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-13: 0 commits</title></rect>
+<rect x="299" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-14: 0 commits</title></rect>
+<rect x="299" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-15: 0 commits</title></rect>
+<rect x="299" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-16: 0 commits</title></rect>
+<rect x="299" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-17: 0 commits</title></rect>
+<rect x="299" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-18: 0 commits</title></rect>
+<rect x="299" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-19: 0 commits</title></rect>
+<rect x="299" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-20: 0 commits</title></rect>
+<rect x="316" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-21: 0 commits</title></rect>
+<rect x="316" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-22: 0 commits</title></rect>
+<rect x="316" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-23: 0 commits</title></rect>
+<rect x="316" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-24: 0 commits</title></rect>
+<rect x="316" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-25: 0 commits</title></rect>
+<rect x="316" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-09-26: 2 commits</title></rect>
+<rect x="316" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-27: 0 commits</title></rect>
+<rect x="333" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-09-28: 6 commits</title></rect>
+<rect x="333" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-09-29: 1 commits</title></rect>
+<rect x="333" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-09-30: 0 commits</title></rect>
+<rect x="333" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-01: 0 commits</title></rect>
+<rect x="333" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-02: 0 commits</title></rect>
+<rect x="333" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-03: 0 commits</title></rect>
+<rect x="333" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-10-04: 3 commits</title></rect>
+<rect x="350" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-10-05: 1 commits</title></rect>
+<rect x="350" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-06: 0 commits</title></rect>
+<rect x="350" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-07: 0 commits</title></rect>
+<rect x="350" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-08: 0 commits</title></rect>
+<rect x="350" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-09: 0 commits</title></rect>
+<rect x="350" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-10: 0 commits</title></rect>
+<rect x="350" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-11: 0 commits</title></rect>
+<rect x="367" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-12: 0 commits</title></rect>
+<rect x="367" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-13: 0 commits</title></rect>
+<rect x="367" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-14: 0 commits</title></rect>
+<rect x="367" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-15: 0 commits</title></rect>
+<rect x="367" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-16: 0 commits</title></rect>
+<rect x="367" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-17: 0 commits</title></rect>
+<rect x="367" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-18: 0 commits</title></rect>
+<rect x="384" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-19: 0 commits</title></rect>
+<rect x="384" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-20: 0 commits</title></rect>
+<rect x="384" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-21: 0 commits</title></rect>
+<rect x="384" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-22: 0 commits</title></rect>
+<rect x="384" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-23: 0 commits</title></rect>
+<rect x="384" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-24: 0 commits</title></rect>
+<rect x="384" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-25: 0 commits</title></rect>
+<rect x="401" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-26: 0 commits</title></rect>
+<rect x="401" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-10-27: 0 commits</title></rect>
+<rect x="401" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-10-28: 1 commits</title></rect>
+<rect x="401" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-10-29: 3 commits</title></rect>
+<rect x="401" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-10-30: 3 commits</title></rect>
+<rect x="401" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-10-31: 1 commits</title></rect>
+<rect x="401" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-01: 1 commits</title></rect>
+<rect x="418" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-02: 1 commits</title></rect>
+<rect x="418" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-03: 1 commits</title></rect>
+<rect x="418" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-04: 9 commits</title></rect>
+<rect x="418" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-05: 8 commits</title></rect>
+<rect x="418" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-11-06: 0 commits</title></rect>
+<rect x="418" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-07: 1 commits</title></rect>
+<rect x="418" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-08: 4 commits</title></rect>
+<rect x="435" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-09: 3 commits</title></rect>
+<rect x="435" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-11-10: 0 commits</title></rect>
+<rect x="435" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-11: 2 commits</title></rect>
+<rect x="435" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-11-12: 0 commits</title></rect>
+<rect x="435" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-11-13: 0 commits</title></rect>
+<rect x="435" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-11-14: 0 commits</title></rect>
+<rect x="435" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-15: 1 commits</title></rect>
+<rect x="452" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-11-16: 0 commits</title></rect>
+<rect x="452" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-17: 4 commits</title></rect>
+<rect x="452" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-18: 1 commits</title></rect>
+<rect x="452" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-19: 5 commits</title></rect>
+<rect x="452" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-20: 5 commits</title></rect>
+<rect x="452" y="620" width="12" height="12" rx="3" fill="#e7ff61" opacity="0.96"><title>2025-11-21: 31 commits</title></rect>
+<rect x="452" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-22: 1 commits</title></rect>
+<rect x="469" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-23: 5 commits</title></rect>
+<rect x="469" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-24: 7 commits</title></rect>
+<rect x="469" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-25: 1 commits</title></rect>
+<rect x="469" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-26: 8 commits</title></rect>
+<rect x="469" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-27: 1 commits</title></rect>
+<rect x="469" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-28: 1 commits</title></rect>
+<rect x="469" y="637" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2025-11-29: 11 commits</title></rect>
+<rect x="486" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-11-30: 4 commits</title></rect>
+<rect x="486" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-01: 2 commits</title></rect>
+<rect x="486" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-02: 3 commits</title></rect>
+<rect x="486" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-03: 0 commits</title></rect>
+<rect x="486" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-04: 0 commits</title></rect>
+<rect x="486" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-05: 5 commits</title></rect>
+<rect x="486" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-06: 0 commits</title></rect>
+<rect x="503" y="535" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2025-12-07: 11 commits</title></rect>
+<rect x="503" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-08: 4 commits</title></rect>
+<rect x="503" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-09: 6 commits</title></rect>
+<rect x="503" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-10: 5 commits</title></rect>
+<rect x="503" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-11: 3 commits</title></rect>
+<rect x="503" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-12: 3 commits</title></rect>
+<rect x="503" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-13: 3 commits</title></rect>
+<rect x="520" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-14: 5 commits</title></rect>
+<rect x="520" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-15: 6 commits</title></rect>
+<rect x="520" y="569" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2025-12-16: 13 commits</title></rect>
+<rect x="520" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-17: 2 commits</title></rect>
+<rect x="520" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-18: 7 commits</title></rect>
+<rect x="520" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-12-19: 6 commits</title></rect>
+<rect x="520" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-20: 0 commits</title></rect>
+<rect x="537" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-21: 0 commits</title></rect>
+<rect x="537" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-22: 0 commits</title></rect>
+<rect x="537" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-23: 0 commits</title></rect>
+<rect x="537" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-24: 0 commits</title></rect>
+<rect x="537" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-25: 0 commits</title></rect>
+<rect x="537" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-26: 0 commits</title></rect>
+<rect x="537" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-27: 0 commits</title></rect>
+<rect x="554" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-28: 0 commits</title></rect>
+<rect x="554" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-29: 0 commits</title></rect>
+<rect x="554" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-30: 0 commits</title></rect>
+<rect x="554" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-12-31: 0 commits</title></rect>
+<rect x="554" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-01: 0 commits</title></rect>
+<rect x="554" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-02: 0 commits</title></rect>
+<rect x="554" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-03: 0 commits</title></rect>
+<rect x="571" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-04: 0 commits</title></rect>
+<rect x="571" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-05: 0 commits</title></rect>
+<rect x="571" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-06: 0 commits</title></rect>
+<rect x="571" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-07: 0 commits</title></rect>
+<rect x="571" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-08: 0 commits</title></rect>
+<rect x="571" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-09: 1 commits</title></rect>
+<rect x="571" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-10: 1 commits</title></rect>
+<rect x="588" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-11: 1 commits</title></rect>
+<rect x="588" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-12: 4 commits</title></rect>
+<rect x="588" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-13: 6 commits</title></rect>
+<rect x="588" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-14: 9 commits</title></rect>
+<rect x="588" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-15: 3 commits</title></rect>
+<rect x="588" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-16: 4 commits</title></rect>
+<rect x="588" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-17: 3 commits</title></rect>
+<rect x="605" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-18: 3 commits</title></rect>
+<rect x="605" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-19: 7 commits</title></rect>
+<rect x="605" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-20: 1 commits</title></rect>
+<rect x="605" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-21: 1 commits</title></rect>
+<rect x="605" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-22: 3 commits</title></rect>
+<rect x="605" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-23: 5 commits</title></rect>
+<rect x="605" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-24: 0 commits</title></rect>
+<rect x="622" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-25: 3 commits</title></rect>
+<rect x="622" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-26: 2 commits</title></rect>
+<rect x="622" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-27: 3 commits</title></rect>
+<rect x="622" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-28: 0 commits</title></rect>
+<rect x="622" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-29: 2 commits</title></rect>
+<rect x="622" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-01-30: 0 commits</title></rect>
+<rect x="622" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-01-31: 3 commits</title></rect>
+<rect x="639" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-01: 0 commits</title></rect>
+<rect x="639" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-02: 1 commits</title></rect>
+<rect x="639" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-03: 5 commits</title></rect>
+<rect x="639" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-04: 4 commits</title></rect>
+<rect x="639" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-05: 5 commits</title></rect>
+<rect x="639" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-06: 5 commits</title></rect>
+<rect x="639" y="637" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2026-02-07: 10 commits</title></rect>
+<rect x="656" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-08: 2 commits</title></rect>
+<rect x="656" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-09: 2 commits</title></rect>
+<rect x="656" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-10: 3 commits</title></rect>
+<rect x="656" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-11: 0 commits</title></rect>
+<rect x="656" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-12: 0 commits</title></rect>
+<rect x="656" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-13: 0 commits</title></rect>
+<rect x="656" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-14: 0 commits</title></rect>
+<rect x="673" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-15: 1 commits</title></rect>
+<rect x="673" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-16: 0 commits</title></rect>
+<rect x="673" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-17: 0 commits</title></rect>
+<rect x="673" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-18: 0 commits</title></rect>
+<rect x="673" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-19: 0 commits</title></rect>
+<rect x="673" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-20: 0 commits</title></rect>
+<rect x="673" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-21: 0 commits</title></rect>
+<rect x="690" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-22: 0 commits</title></rect>
+<rect x="690" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-23: 0 commits</title></rect>
+<rect x="690" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-24: 1 commits</title></rect>
+<rect x="690" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-25: 3 commits</title></rect>
+<rect x="690" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-02-26: 0 commits</title></rect>
+<rect x="690" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-27: 5 commits</title></rect>
+<rect x="690" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-02-28: 5 commits</title></rect>
+<rect x="707" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-01: 4 commits</title></rect>
+<rect x="707" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-02: 4 commits</title></rect>
+<rect x="707" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-03: 5 commits</title></rect>
+<rect x="707" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-04: 3 commits</title></rect>
+<rect x="707" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-05: 2 commits</title></rect>
+<rect x="707" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-06: 9 commits</title></rect>
+<rect x="707" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-07: 3 commits</title></rect>
+<rect x="724" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-08: 3 commits</title></rect>
+<rect x="724" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-03-09: 0 commits</title></rect>
+<rect x="724" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-10: 1 commits</title></rect>
+<rect x="724" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-11: 4 commits</title></rect>
+<rect x="724" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-12: 1 commits</title></rect>
+<rect x="724" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-13: 3 commits</title></rect>
+<rect x="724" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-14: 5 commits</title></rect>
+<rect x="741" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-15: 6 commits</title></rect>
+<rect x="741" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-03-16: 0 commits</title></rect>
+<rect x="741" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-17: 1 commits</title></rect>
+<rect x="741" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-03-18: 0 commits</title></rect>
+<rect x="741" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-19: 3 commits</title></rect>
+<rect x="741" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-20: 5 commits</title></rect>
+<rect x="741" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-21: 2 commits</title></rect>
+<rect x="758" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-22: 1 commits</title></rect>
+<rect x="758" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-23: 1 commits</title></rect>
+<rect x="758" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-24: 3 commits</title></rect>
+<rect x="758" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-25: 5 commits</title></rect>
+<rect x="758" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-26: 8 commits</title></rect>
+<rect x="758" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-27: 2 commits</title></rect>
+<rect x="758" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-28: 1 commits</title></rect>
+<rect x="775" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-03-29: 0 commits</title></rect>
+<rect x="775" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-03-30: 0 commits</title></rect>
+<rect x="775" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-03-31: 1 commits</title></rect>
+<rect x="775" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-01: 0 commits</title></rect>
+<rect x="775" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-02: 0 commits</title></rect>
+<rect x="775" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-03: 1 commits</title></rect>
+<rect x="775" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-04: 2 commits</title></rect>
+<rect x="792" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-05: 0 commits</title></rect>
+<rect x="792" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-06: 0 commits</title></rect>
+<rect x="792" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-07: 3 commits</title></rect>
+<rect x="792" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-08: 8 commits</title></rect>
+<rect x="792" y="603" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2026-04-09: 13 commits</title></rect>
+<rect x="792" y="620" width="12" height="12" rx="3" fill="#e7ff61" opacity="0.96"><title>2026-04-10: 38 commits</title></rect>
+<rect x="792" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-11: 1 commits</title></rect>
+<rect x="809" y="535" width="12" height="12" rx="3" fill="#58c76f" opacity="0.96"><title>2026-04-12: 28 commits</title></rect>
+<rect x="809" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-13: 8 commits</title></rect>
+<rect x="809" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-14: 2 commits</title></rect>
+<rect x="809" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-15: 0 commits</title></rect>
+<rect x="809" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-16: 1 commits</title></rect>
+<rect x="809" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-17: 0 commits</title></rect>
+<rect x="809" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-18: 0 commits</title></rect>
+<rect x="826" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-19: 0 commits</title></rect>
+<rect x="826" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-20: 0 commits</title></rect>
+<rect x="826" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-21: 6 commits</title></rect>
+<rect x="826" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-22: 1 commits</title></rect>
+<rect x="826" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-23: 1 commits</title></rect>
+<rect x="826" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-24: 3 commits</title></rect>
+<rect x="826" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-25: 0 commits</title></rect>
+<rect x="843" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-26: 0 commits</title></rect>
+<rect x="843" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-27: 0 commits</title></rect>
+<rect x="843" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-28: 0 commits</title></rect>
+<rect x="843" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-04-29: 0 commits</title></rect>
+<rect x="843" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-04-30: 1 commits</title></rect>
+<rect x="843" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-01: 0 commits</title></rect>
+<rect x="843" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-02: 0 commits</title></rect>
+<rect x="860" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-03: 0 commits</title></rect>
+<rect x="860" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-04: 0 commits</title></rect>
+<rect x="860" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-05: 1 commits</title></rect>
+<rect x="860" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-06: 2 commits</title></rect>
+<rect x="860" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-07: 2 commits</title></rect>
+<rect x="860" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-08: 0 commits</title></rect>
+<rect x="860" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-09: 5 commits</title></rect>
+<rect x="877" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-10: 0 commits</title></rect>
+<rect x="877" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-11: 1 commits</title></rect>
+<rect x="877" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-12: 0 commits</title></rect>
+<rect x="877" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-13: 2 commits</title></rect>
+<rect x="877" y="603" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-14: 2 commits</title></rect>
+<rect x="877" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-15: 2 commits</title></rect>
+<rect x="877" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-16: 1 commits</title></rect>
+<rect x="894" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-17: 0 commits</title></rect>
+<rect x="894" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-18: 8 commits</title></rect>
+<rect x="894" y="569" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-19: 3 commits</title></rect>
+<rect x="894" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-20: 4 commits</title></rect>
+<rect x="894" y="603" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2026-05-21: 11 commits</title></rect>
+<rect x="894" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-22: 1 commits</title></rect>
+<rect x="894" y="637" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-23: 2 commits</title></rect>
+<rect x="911" y="535" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-24: 1 commits</title></rect>
+<rect x="911" y="552" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-25: 2 commits</title></rect>
+<rect x="911" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-26: 0 commits</title></rect>
+<rect x="911" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-27: 0 commits</title></rect>
+<rect x="911" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-28: 0 commits</title></rect>
+<rect x="911" y="620" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-29: 1 commits</title></rect>
+<rect x="911" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-30: 0 commits</title></rect>
+<rect x="928" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-31: 0 commits</title></rect>
+<rect x="928" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-01: 0 commits</title></rect>
+<rect x="928" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-02: 0 commits</title></rect>
+<rect x="928" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-06-03: 2 commits</title></rect>
+<rect x="928" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-04: 0 commits</title></rect>
+<rect x="928" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-05: 0 commits</title></rect>
+<rect x="928" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-06: 0 commits</title></rect>
+<rect x="945" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-07: 0 commits</title></rect>
+<rect x="945" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-08: 0 commits</title></rect>
+<rect x="945" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-09: 0 commits</title></rect>
+<rect x="945" y="586" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-10: 0 commits</title></rect>
+<rect x="945" y="603" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-11: 0 commits</title></rect>
+<rect x="945" y="620" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-12: 0 commits</title></rect>
+<rect x="945" y="637" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-13: 0 commits</title></rect>
+<rect x="962" y="535" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-14: 0 commits</title></rect>
+<rect x="962" y="552" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-15: 0 commits</title></rect>
+<rect x="962" y="569" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-06-16: 0 commits</title></rect>
+<rect x="962" y="586" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-06-17: 2 commits</title></rect>
+  <text x="78" y="685" class="tiny">Less</text>
+  <rect x="126" y="671" width="16" height="16" rx="4" fill="#172033"/>
+  <rect x="152" y="671" width="16" height="16" rx="4" fill="#1b5e6d"/>
+  <rect x="178" y="671" width="16" height="16" rx="4" fill="#1f9a8a"/>
+  <rect x="204" y="671" width="16" height="16" rx="4" fill="#58c76f"/>
+  <rect x="230" y="671" width="16" height="16" rx="4" fill="#e7ff61"/>
+  <text x="262" y="685" class="tiny">More</text>
+
+  <g transform="translate(0 0)">
+    <text x="1010" y="512" class="section-title">CONTRIBUTOR COMMIT RANKING</text>
+
+  <g>
+    <text x="1010" y="550" class="row-name">ggllzz04</text>
+    <rect x="1260" y="534" width="220" height="14" rx="7" fill="#172033"/>
+    <rect x="1260" y="534" width="320" height="14" rx="7" fill="#52f0b4"/>
+    <text x="1480" y="550" class="row-value" text-anchor="end">219</text>
+  </g>
+
+  <g>
+    <text x="1010" y="598" class="row-name">tearncolour</text>
+    <rect x="1260" y="582" width="220" height="14" rx="7" fill="#172033"/>
+    <rect x="1260" y="582" width="108" height="14" rx="7" fill="#52f0b4"/>
+    <text x="1480" y="598" class="row-value" text-anchor="end">74</text>
+  </g>
+
+  <g>
+    <text x="1010" y="646" class="row-name">Shine12222</text>
+    <rect x="1260" y="630" width="220" height="14" rx="7" fill="#172033"/>
+    <rect x="1260" y="630" width="86" height="14" rx="7" fill="#52f0b4"/>
+    <text x="1480" y="646" class="row-value" text-anchor="end">59</text>
+  </g>
+  </g>
+  <g transform="translate(0 0)">
+    <text x="1010" y="690" class="section-title">PROJECT COMMIT RANKING</text>
+
+  <g>
+    <text x="1010" y="728" class="row-name">JNU_vision_26</text>
+    <rect x="1260" y="712" width="220" height="14" rx="7" fill="#172033"/>
+    <rect x="1260" y="712" width="320" height="14" rx="7" fill="#5db7ff"/>
+    <text x="1480" y="728" class="row-value" text-anchor="end">98</text>
+  </g>
+
+  <g>
+    <text x="1010" y="776" class="row-name">SHARK_Infantry_Bala...</text>
+    <rect x="1260" y="760" width="220" height="14" rx="7" fill="#172033"/>
+    <rect x="1260" y="760" width="287" height="14" rx="7" fill="#5db7ff"/>
+    <text x="1480" y="776" class="row-value" text-anchor="end">88</text>
+  </g>
+
+  <g>
+    <text x="1010" y="824" class="row-name">small_omni_2026</text>
+    <rect x="1260" y="808" width="220" height="14" rx="7" fill="#172033"/>
+    <rect x="1260" y="808" width="199" height="14" rx="7" fill="#5db7ff"/>
+    <text x="1480" y="824" class="row-value" text-anchor="end">61</text>
+  </g>
+  </g>
+
+  <text x="78" y="735" class="section-title">TECH STACK</text>
+<g><rect x="78" y="770" width="146" height="40" rx="20" fill="#10182a" stroke="#263654"/><circle cx="102" cy="790" r="6" fill="#48d597"/><text x="118" y="796" class="pill">C · 26</text></g>
+<g><rect x="248" y="770" width="146" height="40" rx="20" fill="#10182a" stroke="#263654"/><circle cx="272" cy="790" r="6" fill="#5db7ff"/><text x="288" y="796" class="pill">Python · 5</text></g>
+<g><rect x="418" y="770" width="146" height="40" rx="20" fill="#10182a" stroke="#263654"/><circle cx="442" cy="790" r="6" fill="#f0d85a"/><text x="458" y="796" class="pill">Docs · 5</text></g>
+<g><rect x="588" y="770" width="146" height="40" rx="20" fill="#10182a" stroke="#263654"/><circle cx="612" cy="790" r="6" fill="#ff7a90"/><text x="628" y="796" class="pill">Vue · 2</text></g>
+<g><rect x="758" y="770" width="146" height="40" rx="20" fill="#10182a" stroke="#263654"/><circle cx="782" cy="790" r="6" fill="#b59cff"/><text x="798" y="796" class="pill">C++ · 2</text></g>
+<g><rect x="928" y="770" width="146" height="40" rx="20" fill="#10182a" stroke="#263654"/><circle cx="952" cy="790" r="6" fill="#ffad5c"/><text x="968" y="796" class="pill">HTML · 2</text></g>
+</svg>

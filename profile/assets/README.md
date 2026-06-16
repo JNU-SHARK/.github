@@ -4,6 +4,6 @@ Recommended screenshot filenames:
 
 - `github-team.png`: GitHub organization team or member page screenshot.
 - `github-repos.png`: GitHub repository list screenshot.
-- `commit-heatmap.svg`: generated organization activity heatmap.
+- `shark-dashboard.svg`: generated 16:9 organization dashboard.
 
-The profile README already contains commented Markdown snippets for the first two screenshots.
+The profile README embeds the generated dashboard. Optional screenshots can be stored here for backup materials.
