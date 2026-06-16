@@ -8,7 +8,9 @@ import functools
 import html
 import json
 import os
+import shutil
 import ssl
+import subprocess
 import sys
 import urllib.error
 import urllib.parse
@@ -30,6 +32,7 @@ PROFILE_DIR = ROOT / "profile"
 ASSETS_DIR = PROFILE_DIR / "assets"
 README_PATH = PROFILE_DIR / "README.md"
 DASHBOARD_PATH = ASSETS_DIR / "shark-dashboard.svg"
+PNG_DASHBOARD_PATH = ASSETS_DIR / "shark-dashboard.png"
 
 
 def token() -> str | None:
@@ -186,48 +189,34 @@ def heatmap_cells(counts: Counter[str], today: dt.date, left: int, top: int, cel
 def stat_card(x: int, y: int, label: str, value: str, accent: str) -> str:
     return f"""
   <g>
-    <rect x="{x}" y="{y}" width="245" height="112" rx="22" fill="#10182a" stroke="#23304a"/>
-    <rect x="{x}" y="{y}" width="245" height="5" rx="2.5" fill="{accent}"/>
-    <text x="{x + 24}" y="{y + 45}" class="label">{html.escape(label)}</text>
-    <text x="{x + 24}" y="{y + 88}" class="stat">{html.escape(value)}</text>
+    <rect x="{x}" y="{y}" width="260" height="126" rx="24" fill="#10182a" stroke="#25334f"/>
+    <rect x="{x}" y="{y}" width="260" height="6" rx="3" fill="{accent}"/>
+    <text x="{x + 26}" y="{y + 47}" class="label">{html.escape(label)}</text>
+    <text x="{x + 26}" y="{y + 99}" class="stat">{html.escape(value)}</text>
   </g>"""
 
 
-def bar_rows(counter: Counter[str], x: int, y: int, width: int, title: str, accent: str, limit: int = 6) -> str:
+def ranking_table(counter: Counter[str], x: int, y: int, title: str, accent: str, limit: int = 3) -> str:
     rows = counter.most_common(limit)
     if not rows:
-        rows = [("No data", 0)]
-    max_value = max((value for _, value in rows), default=1) or 1
+        rows = [("暂无数据", 0)]
     parts = [
         f'<text x="{x}" y="{y}" class="section-title">{html.escape(title)}</text>',
+        f'<text x="{x + 46}" y="{y + 29}" class="table-head">名称</text>',
+        f'<text x="{x + 388}" y="{y + 29}" class="table-head" text-anchor="end">提交数</text>',
     ]
     for idx, (name, value) in enumerate(rows):
-        row_y = y + 38 + idx * 48
-        bar_width = max(10, int((value / max_value) * (width - 150)))
+        row_y = y + 51 + idx * 35
+        rank = idx + 1
         parts.append(
             f"""
   <g>
-    <text x="{x}" y="{row_y}" class="row-name">{html.escape(short_name(name, 20))}</text>
-    <rect x="{x + 250}" y="{row_y - 16}" width="{width - 250}" height="14" rx="7" fill="#172033"/>
-    <rect x="{x + 250}" y="{row_y - 16}" width="{bar_width}" height="14" rx="7" fill="{accent}"/>
-    <text x="{x + width}" y="{row_y}" class="row-value" text-anchor="end">{value}</text>
+    <rect x="{x}" y="{row_y - 21}" width="410" height="30" rx="10" fill="#111b2e" stroke="#22314d"/>
+    <circle cx="{x + 22}" cy="{row_y - 6}" r="11" fill="{accent}" opacity="0.95"/>
+    <text x="{x + 22}" y="{row_y}" class="rank" text-anchor="middle">{rank}</text>
+    <text x="{x + 46}" y="{row_y - 1}" class="row-name">{html.escape(short_name(name, 22))}</text>
+    <text x="{x + 388}" y="{row_y - 1}" class="row-value" text-anchor="end">{value} 次</text>
   </g>"""
-        )
-    return "\n".join(parts)
-
-
-def language_pills(repos: list[dict]) -> str:
-    languages = Counter(repo.get("language") or "Docs" for repo in repos if not repo.get("archived"))
-    colors = ["#48d597", "#5db7ff", "#f0d85a", "#ff7a90", "#b59cff", "#ffad5c"]
-    x = 78
-    y = 770
-    parts = ['<text x="78" y="735" class="section-title">TECH STACK</text>']
-    for idx, (name, value) in enumerate(languages.most_common(6)):
-        pill_x = x + idx * 170
-        parts.append(
-            f'<g><rect x="{pill_x}" y="{y}" width="146" height="40" rx="20" fill="#10182a" stroke="#263654"/>'
-            f'<circle cx="{pill_x + 24}" cy="{y + 20}" r="6" fill="{colors[idx % len(colors)]}"/>'
-            f'<text x="{pill_x + 40}" y="{y + 26}" class="pill">{html.escape(name)} · {value}</text></g>'
         )
     return "\n".join(parts)
 
@@ -245,12 +234,9 @@ def build_dashboard_svg(
     public_count = org.get("public_repos") or sum(1 for repo in visible_repos if not repo.get("private"))
     private_count = sum(1 for repo in visible_repos if repo.get("private"))
     total_commits = sum(daily_counts.values())
-    latest_repo = next((repo["name"] for repo in visible_repos if repo.get("name") != ".github"), "N/A")
-    updated = today.isoformat()
-
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
-  <title id="title">JNU-SHARK GitHub organization dashboard</title>
-  <desc id="desc">16:9 dashboard with full visible organization statistics, commit heatmap, repository ranking, and contributor ranking.</desc>
+  <title id="title">JNU-SHARK 代码活跃看板</title>
+  <desc id="desc">16:9 organization statistics dashboard.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#07111f"/>
@@ -268,18 +254,16 @@ def build_dashboard_svg(
   </defs>
   <style>
     text {{ font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #e8edf7; }}
-    .kicker {{ font-size: 24px; font-weight: 700; fill: #52f0b4; letter-spacing: 0; }}
-    .title {{ font-size: 78px; font-weight: 900; letter-spacing: 0; }}
-    .cn-title {{ font-size: 38px; font-weight: 820; fill: #eef4ff; }}
-    .subtitle {{ font-size: 23px; fill: #aab6cc; }}
-    .label {{ font-size: 18px; fill: #8fa0bc; font-weight: 650; }}
-    .stat {{ font-size: 44px; font-weight: 850; }}
-    .section-title {{ font-size: 22px; font-weight: 820; fill: #eef4ff; }}
-    .row-name {{ font-size: 18px; fill: #c8d3e7; font-weight: 650; }}
-    .row-value {{ font-size: 20px; fill: #eef4ff; font-weight: 800; }}
-    .tiny {{ font-size: 15px; fill: #8fa0bc; }}
-    .pill {{ font-size: 18px; fill: #d7e2f4; font-weight: 720; }}
-    .mono {{ font-size: 18px; fill: #aab6cc; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }}
+    .title {{ font-size: 64px; font-weight: 900; letter-spacing: 0; }}
+    .subtitle {{ font-size: 32px; font-weight: 780; fill: #e8edf7; }}
+    .label {{ font-size: 22px; fill: #aab6cc; font-weight: 760; }}
+    .stat {{ font-size: 50px; font-weight: 900; }}
+    .section-title {{ font-size: 28px; font-weight: 860; fill: #eef4ff; }}
+    .table-head {{ font-size: 16px; fill: #8494b4; font-weight: 720; }}
+    .row-name {{ font-size: 18px; fill: #d7e2f4; font-weight: 720; }}
+    .row-value {{ font-size: 18px; fill: #eef4ff; font-weight: 860; }}
+    .rank {{ font-size: 15px; fill: #07111f; font-weight: 900; }}
+    .tiny {{ font-size: 18px; fill: #aab6cc; font-weight: 620; }}
   </style>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
@@ -290,39 +274,31 @@ def build_dashboard_svg(
     <rect x="48" y="42" width="1504" height="816" rx="34" fill="#0b1324" opacity="0.88" stroke="#263654"/>
   </g>
 
-  <text x="78" y="98" class="kicker">ROBOMASTER ENGINEERING · FULL ORG STATS</text>
-  <text x="78" y="178" class="title">JNU-SHARK</text>
-  <text x="80" y="226" class="cn-title">霞客湾 SHARK 机器人俱乐部</text>
-  <text x="80" y="264" class="subtitle">{html.escape(ORG_DESCRIPTION)} · 成员 / 私有仓库 / 全量可见提交统计</text>
-  <rect x="78" y="286" width="524" height="6" rx="3" fill="url(#hero)"/>
-  <text x="1170" y="104" class="mono">github.com/{ORG}</text>
-  <text x="1170" y="136" class="tiny">Updated {updated} Asia/Shanghai</text>
-  <text x="1170" y="168" class="tiny">Latest active project: {html.escape(short_name(latest_repo, 30))}</text>
+  <text x="78" y="124" class="title">JNU-SHARK 代码活跃看板</text>
+  <text x="80" y="172" class="subtitle">霞客湾 SHARK 机器人俱乐部</text>
+  <rect x="78" y="200" width="520" height="7" rx="3.5" fill="url(#hero)"/>
 
-  {stat_card(78, 324, "ORGANIZATION MEMBERS", str(member_count), "#52f0b4")}
-  {stat_card(360, 324, "TOTAL PROJECTS", str(max(len(visible_repos), MANUAL_VISIBLE_PROJECT_COUNT)), "#5db7ff")}
-  {stat_card(642, 324, "PRIVATE REPOS", str(private_count), "#ff7a90")}
-  {stat_card(924, 324, "PUBLIC REPOS", str(public_count), "#f0d85a")}
-  {stat_card(1206, 324, "COMMITS · 365D", str(total_commits), "#b59cff")}
+  {stat_card(78, 245, "成员", str(member_count), "#52f0b4")}
+  {stat_card(362, 245, "项目总数", str(max(len(visible_repos), MANUAL_VISIBLE_PROJECT_COUNT)), "#5db7ff")}
+  {stat_card(646, 245, "私有仓库", str(private_count), "#ff7a90")}
+  {stat_card(930, 245, "公开仓库", str(public_count), "#f0d85a")}
+  {stat_card(1214, 245, "近一年提交", str(total_commits), "#b59cff")}
 
-  <text x="78" y="506" class="section-title">COMMIT HISTORY · LAST 365 DAYS</text>
-  {heatmap_cells(daily_counts, today, 78, 535, 12, 5)}
-  <text x="78" y="685" class="tiny">Less</text>
-  <rect x="126" y="671" width="16" height="16" rx="4" fill="#172033"/>
-  <rect x="152" y="671" width="16" height="16" rx="4" fill="#1b5e6d"/>
-  <rect x="178" y="671" width="16" height="16" rx="4" fill="#1f9a8a"/>
-  <rect x="204" y="671" width="16" height="16" rx="4" fill="#58c76f"/>
-  <rect x="230" y="671" width="16" height="16" rx="4" fill="#e7ff61"/>
-  <text x="262" y="685" class="tiny">More</text>
+  <rect x="78" y="412" width="880" height="388" rx="28" fill="#10182a" stroke="#25334f"/>
+  <text x="112" y="466" class="section-title">近一年提交热力图 · {total_commits} 次</text>
+  {heatmap_cells(daily_counts, today, 112, 510, 12, 3)}
+  <text x="112" y="666" class="tiny">少</text>
+  <rect x="150" y="649" width="17" height="17" rx="4" fill="#172033"/>
+  <rect x="178" y="649" width="17" height="17" rx="4" fill="#1b5e6d"/>
+  <rect x="206" y="649" width="17" height="17" rx="4" fill="#1f9a8a"/>
+  <rect x="234" y="649" width="17" height="17" rx="4" fill="#58c76f"/>
+  <rect x="262" y="649" width="17" height="17" rx="4" fill="#e7ff61"/>
+  <text x="300" y="666" class="tiny">多</text>
 
-  <g transform="translate(0 0)">
-    {bar_rows(author_counts, 1010, 512, 470, "CONTRIBUTOR COMMIT RANKING", "#52f0b4", 3)}
-  </g>
-  <g transform="translate(0 0)">
-    {bar_rows(repo_counts, 1010, 690, 470, "PROJECT COMMIT RANKING", "#5db7ff", 3)}
-  </g>
-
-  {language_pills(visible_repos)}
+  <rect x="990" y="412" width="484" height="184" rx="28" fill="#10182a" stroke="#25334f"/>
+  {ranking_table(author_counts, 1028, 454, "成员提交排行", "#52f0b4", 3)}
+  <rect x="990" y="616" width="484" height="184" rx="28" fill="#10182a" stroke="#25334f"/>
+  {ranking_table(repo_counts, 1028, 658, "项目提交排行", "#5db7ff", 3)}
 </svg>
 """
 
@@ -330,19 +306,31 @@ def build_dashboard_svg(
 def build_readme() -> str:
     return f"""<div align="center">
 
-![{TEAM_NAME} GitHub dashboard](./assets/shark-dashboard.svg)
-
-[组织主页](https://github.com/{ORG}) · [公开仓库](https://github.com/orgs/{ORG}/repositories) · [战队网站](https://{ORG}.github.io)
+![{TEAM_NAME} 代码活跃看板](./assets/shark-dashboard.png)
 
 </div>
-
-<!--
-配图建议 6：
-1. 这张 dashboard 已经是 16:9，适合直接整图截图。
-2. 如需保留 GitHub 组织团队页面截图，可放到 profile/assets/github-team.png。
-3. 如需保留代码库列表截图，可放到 profile/assets/github-repos.png。
--->
 """
+
+
+def render_dashboard_png() -> bool:
+    converter = shutil.which("rsvg-convert")
+    if not converter:
+        print("rsvg-convert not found; skipped PNG rendering", file=sys.stderr)
+        return False
+    subprocess.run(
+        [
+            converter,
+            "--width",
+            "1600",
+            "--height",
+            "900",
+            str(DASHBOARD_PATH),
+            "--output",
+            str(PNG_DASHBOARD_PATH),
+        ],
+        check=True,
+    )
+    return True
 
 
 def ensure_full_stats(repos: list[dict], member_count: int) -> None:
@@ -372,10 +360,13 @@ def main() -> int:
         build_dashboard_svg(org, repos, member_count, daily_counts, repo_counts, author_counts),
         encoding="utf-8",
     )
+    rendered_png = render_dashboard_png()
     README_PATH.write_text(build_readme(), encoding="utf-8")
 
     print(f"Updated {README_PATH.relative_to(ROOT)}")
     print(f"Updated {DASHBOARD_PATH.relative_to(ROOT)}")
+    if rendered_png:
+        print(f"Updated {PNG_DASHBOARD_PATH.relative_to(ROOT)}")
     return 0
 
 
