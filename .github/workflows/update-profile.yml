@@ -20,10 +20,11 @@ jobs:
 
       - name: Generate profile
         env:
-          GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           MEMBER_COUNT: "24"
           VISIBLE_PROJECT_COUNT: "43"
-          FULL_STATS_REQUIRED: "1"
+          FULL_STATS_REQUIRED: ${{ secrets.PROFILE_STATS_TOKEN != '' && '1' || '0' }}
         run: python3 scripts/update_profile.py
 
       - name: Commit changes

@@ -36,7 +36,7 @@ PNG_DASHBOARD_PATH = ASSETS_DIR / "shark-dashboard.png"
 
 
 def token() -> str | None:
-    return os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN")
+    return os.getenv("PROFILE_STATS_TOKEN") or os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN")
 
 
 @functools.lru_cache(maxsize=1)
