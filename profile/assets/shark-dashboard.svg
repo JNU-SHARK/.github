@@ -444,7 +444,8 @@
 <rect x="877" y="570" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-09: 1 commits</title></rect>
 <rect x="877" y="585" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-10: 6 commits</title></rect>
 <rect x="877" y="600" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-11: 9 commits</title></rect>
-<rect x="892" y="510" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-07-12: 0 commits</title></rect>
+<rect x="892" y="510" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-12: 3 commits</title></rect>
+<rect x="892" y="525" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-07-13: 0 commits</title></rect>
   <text x="112" y="666" class="tiny">少</text>
   <rect x="150" y="649" width="17" height="17" rx="4" fill="#172033"/>
   <rect x="178" y="649" width="17" height="17" rx="4" fill="#1b5e6d"/>
@@ -463,7 +464,7 @@
     <circle cx="1050" cy="499" r="11" fill="#52f0b4" opacity="0.95"/>
     <text x="1050" y="505" class="rank" text-anchor="middle">1</text>
     <text x="1074" y="504" class="row-name">ggllzz04</text>
-    <text x="1416" y="504" class="row-value" text-anchor="end">255 次</text>
+    <text x="1416" y="504" class="row-value" text-anchor="end">256 次</text>
   </g>
 
   <g>
@@ -507,6 +508,6 @@
     <circle cx="1050" cy="773" r="11" fill="#5db7ff" opacity="0.95"/>
     <text x="1050" y="779" class="rank" text-anchor="middle">3</text>
     <text x="1074" y="778" class="row-name">JNU_vision_26</text>
-    <text x="1416" y="778" class="row-value" text-anchor="end">64 次</text>
+    <text x="1416" y="778" class="row-value" text-anchor="end">61 次</text>
   </g>
 </svg>
