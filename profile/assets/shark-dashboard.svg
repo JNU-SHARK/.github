@@ -54,14 +54,14 @@
     <rect x="362" y="245" width="260" height="126" rx="24" fill="#10182a" stroke="#25334f"/>
     <rect x="362" y="245" width="260" height="6" rx="3" fill="#5db7ff"/>
     <text x="388" y="292" class="label">项目总数</text>
-    <text x="388" y="344" class="stat">46</text>
+    <text x="388" y="344" class="stat">47</text>
   </g>
   
   <g>
     <rect x="646" y="245" width="260" height="126" rx="24" fill="#10182a" stroke="#25334f"/>
     <rect x="646" y="245" width="260" height="6" rx="3" fill="#ff7a90"/>
     <text x="672" y="292" class="label">私有仓库</text>
-    <text x="672" y="344" class="stat">35</text>
+    <text x="672" y="344" class="stat">36</text>
   </g>
   
   <g>
@@ -81,7 +81,7 @@
   <rect x="78" y="412" width="880" height="388" rx="28" fill="#10182a" stroke="#25334f"/>
   <text x="112" y="466" class="section-title">近一年提交热力图 · 730 次</text>
   <rect x="112" y="510" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-13: 0 commits</title></rect>
-<rect x="112" y="525" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-14: 4 commits</title></rect>
+<rect x="112" y="525" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-14: 0 commits</title></rect>
 <rect x="112" y="540" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-15: 2 commits</title></rect>
 <rect x="112" y="555" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2025-07-16: 7 commits</title></rect>
 <rect x="112" y="570" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-17: 0 commits</title></rect>
@@ -446,7 +446,8 @@
 <rect x="877" y="600" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2026-07-11: 10 commits</title></rect>
 <rect x="892" y="510" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-12: 3 commits</title></rect>
 <rect x="892" y="525" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-13: 2 commits</title></rect>
-<rect x="892" y="540" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-07-14: 0 commits</title></rect>
+<rect x="892" y="540" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-14: 4 commits</title></rect>
+<rect x="892" y="555" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-07-15: 0 commits</title></rect>
   <text x="112" y="666" class="tiny">少</text>
   <rect x="150" y="649" width="17" height="17" rx="4" fill="#172033"/>
   <rect x="178" y="649" width="17" height="17" rx="4" fill="#1b5e6d"/>
@@ -465,7 +466,7 @@
     <circle cx="1050" cy="499" r="11" fill="#52f0b4" opacity="0.95"/>
     <text x="1050" y="505" class="rank" text-anchor="middle">1</text>
     <text x="1074" y="504" class="row-name">ggllzz04</text>
-    <text x="1416" y="504" class="row-value" text-anchor="end">257 次</text>
+    <text x="1416" y="504" class="row-value" text-anchor="end">258 次</text>
   </g>
 
   <g>
@@ -508,7 +509,7 @@
     <rect x="1028" y="758" width="410" height="30" rx="10" fill="#111b2e" stroke="#22314d"/>
     <circle cx="1050" cy="773" r="11" fill="#5db7ff" opacity="0.95"/>
     <text x="1050" y="779" class="rank" text-anchor="middle">3</text>
-    <text x="1074" y="778" class="row-name">JNU_vision_26</text>
+    <text x="1074" y="778" class="row-name">gimbalboard_omni_2026</text>
     <text x="1416" y="778" class="row-value" text-anchor="end">57 次</text>
   </g>
 </svg>
