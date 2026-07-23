@@ -75,11 +75,11 @@
     <rect x="1214" y="245" width="260" height="126" rx="24" fill="#10182a" stroke="#25334f"/>
     <rect x="1214" y="245" width="260" height="6" rx="3" fill="#b59cff"/>
     <text x="1240" y="292" class="label">近一年提交</text>
-    <text x="1240" y="344" class="stat">746</text>
+    <text x="1240" y="344" class="stat">768</text>
   </g>
 
   <rect x="78" y="412" width="880" height="388" rx="28" fill="#10182a" stroke="#25334f"/>
-  <text x="112" y="466" class="section-title">近一年提交热力图 · 746 次</text>
+  <text x="112" y="466" class="section-title">近一年提交热力图 · 768 次</text>
   <rect x="112" y="510" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-20: 0 commits</title></rect>
 <rect x="112" y="525" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-21: 0 commits</title></rect>
 <rect x="112" y="540" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2025-07-22: 0 commits</title></rect>
@@ -371,22 +371,22 @@
 <rect x="727" y="525" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-04: 0 commits</title></rect>
 <rect x="727" y="540" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-05: 1 commits</title></rect>
 <rect x="727" y="555" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-06: 2 commits</title></rect>
-<rect x="727" y="570" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-07: 2 commits</title></rect>
-<rect x="727" y="585" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-08: 0 commits</title></rect>
+<rect x="727" y="570" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-07: 4 commits</title></rect>
+<rect x="727" y="585" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-08: 6 commits</title></rect>
 <rect x="727" y="600" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-09: 5 commits</title></rect>
-<rect x="742" y="510" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-10: 3 commits</title></rect>
-<rect x="742" y="525" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-11: 5 commits</title></rect>
+<rect x="742" y="510" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-10: 4 commits</title></rect>
+<rect x="742" y="525" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-11: 6 commits</title></rect>
 <rect x="742" y="540" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-05-12: 0 commits</title></rect>
-<rect x="742" y="555" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-13: 2 commits</title></rect>
-<rect x="742" y="570" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-14: 2 commits</title></rect>
-<rect x="742" y="585" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-15: 5 commits</title></rect>
-<rect x="742" y="600" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-16: 1 commits</title></rect>
+<rect x="742" y="555" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-13: 3 commits</title></rect>
+<rect x="742" y="570" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-14: 4 commits</title></rect>
+<rect x="742" y="585" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-15: 6 commits</title></rect>
+<rect x="742" y="600" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-16: 3 commits</title></rect>
 <rect x="757" y="510" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-17: 3 commits</title></rect>
 <rect x="757" y="525" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-18: 9 commits</title></rect>
 <rect x="757" y="540" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-19: 6 commits</title></rect>
-<rect x="757" y="555" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-20: 4 commits</title></rect>
+<rect x="757" y="555" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-20: 5 commits</title></rect>
 <rect x="757" y="570" width="12" height="12" rx="3" fill="#1f9a8a" opacity="0.96"><title>2026-05-21: 11 commits</title></rect>
-<rect x="757" y="585" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-22: 1 commits</title></rect>
+<rect x="757" y="585" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-22: 2 commits</title></rect>
 <rect x="757" y="600" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-23: 3 commits</title></rect>
 <rect x="772" y="510" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-24: 1 commits</title></rect>
 <rect x="772" y="525" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-05-25: 2 commits</title></rect>
@@ -448,7 +448,8 @@
 <rect x="892" y="525" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-20: 1 commits</title></rect>
 <rect x="892" y="540" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-21: 2 commits</title></rect>
 <rect x="892" y="555" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-22: 1 commits</title></rect>
-<rect x="892" y="570" width="12" height="12" rx="3" fill="#172033" opacity="0.96"><title>2026-07-23: 0 commits</title></rect>
+<rect x="892" y="570" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-23: 3 commits</title></rect>
+<rect x="892" y="585" width="12" height="12" rx="3" fill="#1b5e6d" opacity="0.96"><title>2026-07-24: 1 commits</title></rect>
   <text x="112" y="666" class="tiny">少</text>
   <rect x="150" y="649" width="17" height="17" rx="4" fill="#172033"/>
   <rect x="178" y="649" width="17" height="17" rx="4" fill="#1b5e6d"/>
@@ -467,7 +468,7 @@
     <circle cx="1050" cy="499" r="11" fill="#52f0b4" opacity="0.95"/>
     <text x="1050" y="505" class="rank" text-anchor="middle">1</text>
     <text x="1074" y="504" class="row-name">ggllzz04</text>
-    <text x="1416" y="504" class="row-value" text-anchor="end">270 次</text>
+    <text x="1416" y="504" class="row-value" text-anchor="end">279 次</text>
   </g>
 
   <g>
